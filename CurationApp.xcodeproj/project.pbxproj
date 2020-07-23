@@ -15,6 +15,8 @@
 		D998E6C224C7D6D4009C8EAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D998E6C024C7D6D4009C8EAC /* LaunchScreen.storyboard */; };
 		D998E6CD24C7D6D5009C8EAC /* CurationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6CC24C7D6D5009C8EAC /* CurationAppTests.swift */; };
 		D998E6DD24C95D8A009C8EAC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D998E6DC24C95D8A009C8EAC /* .swiftlint.yml */; };
+		D998E6E224C96235009C8EAC /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6E024C96235009C8EAC /* SignupViewController.swift */; };
+		D998E6E324C96235009C8EAC /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D998E6E124C96235009C8EAC /* SignupViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		D998E6CC24C7D6D5009C8EAC /* CurationAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurationAppTests.swift; sourceTree = "<group>"; };
 		D998E6CE24C7D6D5009C8EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D998E6DC24C95D8A009C8EAC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		D998E6E024C96235009C8EAC /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		D998E6E124C96235009C8EAC /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +86,10 @@
 		D998E6B424C7D6CE009C8EAC /* CurationApp */ = {
 			isa = PBXGroup;
 			children = (
+				D998E6DF24C961D0009C8EAC /* Controller */,
+				D998E6DE24C961C1009C8EAC /* View */,
 				D998E6B524C7D6CE009C8EAC /* AppDelegate.swift */,
 				D998E6B724C7D6CE009C8EAC /* SceneDelegate.swift */,
-				D998E6B924C7D6CE009C8EAC /* LoginViewController.swift */,
-				D998E6BB24C7D6CE009C8EAC /* Login.storyboard */,
 				D998E6BE24C7D6D4009C8EAC /* Assets.xcassets */,
 				D998E6C024C7D6D4009C8EAC /* LaunchScreen.storyboard */,
 				D998E6C324C7D6D4009C8EAC /* Info.plist */,
@@ -100,6 +104,24 @@
 				D998E6CE24C7D6D5009C8EAC /* Info.plist */,
 			);
 			path = CurationAppTests;
+			sourceTree = "<group>";
+		};
+		D998E6DE24C961C1009C8EAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D998E6BB24C7D6CE009C8EAC /* Login.storyboard */,
+				D998E6E124C96235009C8EAC /* SignupViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D998E6DF24C961D0009C8EAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D998E6E024C96235009C8EAC /* SignupViewController.swift */,
+				D998E6B924C7D6CE009C8EAC /* LoginViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D998E6DD24C95D8A009C8EAC /* .swiftlint.yml in Resources */,
+				D998E6E324C96235009C8EAC /* SignupViewController.xib in Resources */,
 				D998E6C224C7D6D4009C8EAC /* LaunchScreen.storyboard in Resources */,
 				D998E6BF24C7D6D4009C8EAC /* Assets.xcassets in Resources */,
 				D998E6BD24C7D6CE009C8EAC /* Login.storyboard in Resources */,
@@ -227,6 +250,7 @@
 			files = (
 				D998E6BA24C7D6CE009C8EAC /* LoginViewController.swift in Sources */,
 				D998E6B624C7D6CE009C8EAC /* AppDelegate.swift in Sources */,
+				D998E6E224C96235009C8EAC /* SignupViewController.swift in Sources */,
 				D998E6B824C7D6CE009C8EAC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

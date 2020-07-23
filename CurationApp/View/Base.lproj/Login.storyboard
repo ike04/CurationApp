@@ -31,18 +31,28 @@
                                     <action selector="didLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amt-T6-mhr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-Ht-UGi">
+                                <rect key="frame" x="238" y="800" width="131" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didSignupTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaD-Hc-cUd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="HcE-tt-0EK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9JZ-BV-WOh"/>
-                            <constraint firstItem="HcE-tt-0EK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="Ucj-7K-9GT"/>
-                            <constraint firstItem="HcE-tt-0EK" firstAttribute="leading" secondItem="5qw-Jf-lbm" secondAttribute="leading" id="Xk1-HL-ebH"/>
-                            <constraint firstItem="OVN-ai-xUT" firstAttribute="top" secondItem="5qw-Jf-lbm" secondAttribute="bottom" constant="46" id="b6g-mH-SWg"/>
-                            <constraint firstItem="5qw-Jf-lbm" firstAttribute="trailing" secondItem="OVN-ai-xUT" secondAttribute="trailing" id="dO0-Gg-2ib"/>
-                            <constraint firstItem="5qw-Jf-lbm" firstAttribute="top" secondItem="HcE-tt-0EK" secondAttribute="bottom" constant="44" id="ebr-Nz-qXx"/>
-                            <constraint firstItem="HcE-tt-0EK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="lhe-HY-r1d"/>
-                            <constraint firstItem="5qw-Jf-lbm" firstAttribute="leading" secondItem="OVN-ai-xUT" secondAttribute="leading" id="nvN-KL-dPH"/>
-                            <constraint firstItem="HcE-tt-0EK" firstAttribute="trailing" secondItem="5qw-Jf-lbm" secondAttribute="trailing" id="wxq-i9-BR6"/>
+                            <constraint firstItem="5qw-Jf-lbm" firstAttribute="leading" secondItem="OVN-ai-xUT" secondAttribute="leading" id="20v-gE-20m"/>
+                            <constraint firstItem="OVN-ai-xUT" firstAttribute="top" secondItem="5qw-Jf-lbm" secondAttribute="bottom" constant="46" id="3h0-0U-ORc"/>
+                            <constraint firstItem="HcE-tt-0EK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5tE-M5-66b"/>
+                            <constraint firstItem="HcE-tt-0EK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="IL7-fD-WNq"/>
+                            <constraint firstItem="5qw-Jf-lbm" firstAttribute="top" secondItem="HcE-tt-0EK" secondAttribute="bottom" constant="44" id="Ovj-XB-18i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bdg-Ht-UGi" secondAttribute="bottom" constant="32" id="RFP-DP-sej"/>
+                            <constraint firstItem="5qw-Jf-lbm" firstAttribute="trailing" secondItem="OVN-ai-xUT" secondAttribute="trailing" id="SZO-ba-ZsQ"/>
+                            <constraint firstItem="HcE-tt-0EK" firstAttribute="trailing" secondItem="5qw-Jf-lbm" secondAttribute="trailing" id="W2b-kK-SuJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bdg-Ht-UGi" secondAttribute="trailing" constant="45" id="ZIj-hQ-RwF"/>
+                            <constraint firstItem="HcE-tt-0EK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="aHz-C9-uC2"/>
+                            <constraint firstItem="HcE-tt-0EK" firstAttribute="leading" secondItem="5qw-Jf-lbm" secondAttribute="leading" id="i35-63-wCq"/>
+                            <constraint firstItem="Bdg-Ht-UGi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="238" id="rVk-PD-hkr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -51,6 +61,7 @@
                         <outlet property="emailTextField" destination="HcE-tt-0EK" id="VLM-sT-qXW"/>
                         <outlet property="loginButton" destination="OVN-ai-xUT" id="vLb-Yq-BOE"/>
                         <outlet property="passwordTextField" destination="5qw-Jf-lbm" id="g35-8D-0Qg"/>
+                        <outlet property="signupButton" destination="Bdg-Ht-UGi" id="of9-S0-owi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

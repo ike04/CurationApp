@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
         didSet {
             passwordTextField.placeholder = "password"
             passwordTextField.clearButtonMode = .always
+            passwordTextField.isSecureTextEntry = true
+
         }
     }
     
@@ -33,12 +35,26 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var signupButton: UIButton! {
+        didSet {
+            signupButton.setTitle("Sign up", for: UIControl.State.normal)
+            signupButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            signupButton.backgroundColor = UIColor.systemBlue
+            signupButton.layer.cornerRadius = 10
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func didLoginButtonTapped(_ sender: Any) {
-        // TODO
+        //TODO
     }
     
+    @IBAction func didSignupTapped(_ sender: Any) {
+        let signupViewController: UIViewController = SignupViewController()
+        let signupView = UINavigationController(rootViewController: signupViewController)
+        self.present(signupView, animated: true)
+    }
 }
