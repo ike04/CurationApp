@@ -94,7 +94,7 @@ class SignupViewController: UIViewController {
         userNameTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -200).isActive = true
         userNameTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         userNameTextField.widthAnchor.constraint(equalToConstant: 250).isActive = true
-         // メールアドレス
+        // メールアドレス
         emailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         emailTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -140).isActive = true
         emailTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true

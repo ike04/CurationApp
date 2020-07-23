@@ -17,6 +17,10 @@
 		D998E6DD24C95D8A009C8EAC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D998E6DC24C95D8A009C8EAC /* .swiftlint.yml */; };
 		D998E6E224C96235009C8EAC /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6E024C96235009C8EAC /* SignupViewController.swift */; };
 		D998E6E324C96235009C8EAC /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D998E6E124C96235009C8EAC /* SignupViewController.xib */; };
+		D9B1A65824C971B300F96FD8 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65724C971B300F96FD8 /* Rswift.framework */; };
+		D9B1A65924C971B300F96FD8 /* Rswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65724C971B300F96FD8 /* Rswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9B1A65C24C971C300F96FD8 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65B24C971C300F96FD8 /* SVProgressHUD.framework */; };
+		D9B1A65D24C971C300F96FD8 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65B24C971C300F96FD8 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,21 @@
 			remoteInfo = CurationApp;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D9B1A65A24C971B300F96FD8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D9B1A65D24C971C300F96FD8 /* SVProgressHUD.framework in Embed Frameworks */,
+				D9B1A65924C971B300F96FD8 /* Rswift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D998E6B224C7D6CE009C8EAC /* CurationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +63,8 @@
 		D998E6DC24C95D8A009C8EAC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D998E6E024C96235009C8EAC /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		D998E6E124C96235009C8EAC /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		D9B1A65724C971B300F96FD8 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		D9B1A65B24C971C300F96FD8 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B1A65C24C971C300F96FD8 /* SVProgressHUD.framework in Frameworks */,
+				D9B1A65824C971B300F96FD8 /* Rswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +94,7 @@
 				D998E6B424C7D6CE009C8EAC /* CurationApp */,
 				D998E6CB24C7D6D5009C8EAC /* CurationAppTests */,
 				D998E6B324C7D6CE009C8EAC /* Products */,
+				D9B1A65624C971B300F96FD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +148,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D9B1A65624C971B300F96FD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9B1A65B24C971C300F96FD8 /* SVProgressHUD.framework */,
+				D9B1A65724C971B300F96FD8 /* Rswift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,10 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D998E6D124C7D6D5009C8EAC /* Build configuration list for PBXNativeTarget "CurationApp" */;
 			buildPhases = (
+				D998E6DB24C95CFA009C8EAC /* Run Script(swiftlint) */,
 				D998E6AE24C7D6CE009C8EAC /* Sources */,
 				D998E6AF24C7D6CE009C8EAC /* Frameworks */,
 				D998E6B024C7D6CE009C8EAC /* Resources */,
-				D998E6DB24C95CFA009C8EAC /* ShellScript */,
+				D9B1A65524C970E900F96FD8 /* ShellScript */,
+				D9B1A65A24C971B300F96FD8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,7 +259,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D998E6DB24C95CFA009C8EAC /* ShellScript */ = {
+		D998E6DB24C95CFA009C8EAC /* Run Script(swiftlint) */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -233,6 +268,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script(swiftlint)";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -240,6 +276,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		D9B1A65524C970E900F96FD8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -412,6 +467,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CurationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -429,6 +488,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CurationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
