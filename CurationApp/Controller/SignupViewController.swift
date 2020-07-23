@@ -126,4 +126,8 @@ class SignupViewController: UIViewController {
     @objc private func didCloseBarButtonTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

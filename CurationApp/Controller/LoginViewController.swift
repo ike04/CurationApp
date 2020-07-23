@@ -22,7 +22,6 @@ class LoginViewController: UIViewController {
             passwordTextField.placeholder = "password"
             passwordTextField.clearButtonMode = .always
             passwordTextField.isSecureTextEntry = true
-            
         }
     }
     
@@ -56,5 +55,9 @@ class LoginViewController: UIViewController {
         let signupViewController: UIViewController = SignupViewController()
         let signupView = UINavigationController(rootViewController: signupViewController)
         self.present(signupView, animated: true)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
