@@ -13,6 +13,9 @@
 		D9317C3324CA9382007D871E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9317C3224CA9382007D871E /* R.generated.swift */; };
 		D9317C3624CA945F007D871E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9317C3424CA945F007D871E /* AccountViewController.swift */; };
 		D9317C3724CA945F007D871E /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9317C3524CA945F007D871E /* AccountViewController.xib */; };
+		D9317C3A24CA9BC9007D871E /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9317C3824CA9BC9007D871E /* SiteCell.swift */; };
+		D9317C3B24CA9BC9007D871E /* SiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9317C3924CA9BC9007D871E /* SiteCell.xib */; };
+		D9317C3D24CA9D21007D871E /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9317C3C24CA9D21007D871E /* Site.swift */; };
 		D998E6B624C7D6CE009C8EAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6B524C7D6CE009C8EAC /* AppDelegate.swift */; };
 		D998E6B824C7D6CE009C8EAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6B724C7D6CE009C8EAC /* SceneDelegate.swift */; };
 		D998E6BA24C7D6CE009C8EAC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6B924C7D6CE009C8EAC /* LoginViewController.swift */; };
@@ -62,6 +65,9 @@
 		D9317C3224CA9382007D871E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		D9317C3424CA945F007D871E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D9317C3524CA945F007D871E /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		D9317C3824CA9BC9007D871E /* SiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
+		D9317C3924CA9BC9007D871E /* SiteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SiteCell.xib; sourceTree = "<group>"; };
+		D9317C3C24CA9D21007D871E /* Site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Site.swift; sourceTree = "<group>"; };
 		D998E6B224C7D6CE009C8EAC /* CurationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D998E6B524C7D6CE009C8EAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D998E6B724C7D6CE009C8EAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D9317C3E24CA9D26007D871E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9317C3C24CA9D21007D871E /* Site.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D998E6A924C7D6CE009C8EAC = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +147,7 @@
 				D998E6C024C7D6D4009C8EAC /* LaunchScreen.storyboard */,
 				D998E6C324C7D6D4009C8EAC /* Info.plist */,
 				D9B1A67E24C980DE00F96FD8 /* Localizable.strings */,
+				D9317C3E24CA9D26007D871E /* Model */,
 			);
 			path = CurationApp;
 			sourceTree = "<group>";
@@ -153,6 +168,8 @@
 				D9317C2C24CA8E9D007D871E /* SiteListViewController.xib */,
 				D998E6BB24C7D6CE009C8EAC /* Login.storyboard */,
 				D9B1A69124C9832C00F96FD8 /* SignupViewController.xib */,
+				D9317C3824CA9BC9007D871E /* SiteCell.swift */,
+				D9317C3924CA9BC9007D871E /* SiteCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +288,7 @@
 				D998E6BD24C7D6CE009C8EAC /* Login.storyboard in Resources */,
 				D9317C3724CA945F007D871E /* AccountViewController.xib in Resources */,
 				D9317C2E24CA8E9D007D871E /* SiteListViewController.xib in Resources */,
+				D9317C3B24CA9BC9007D871E /* SiteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +370,9 @@
 				D9317C3324CA9382007D871E /* R.generated.swift in Sources */,
 				D9317C3624CA945F007D871E /* AccountViewController.swift in Sources */,
 				D998E6B624C7D6CE009C8EAC /* AppDelegate.swift in Sources */,
+				D9317C3A24CA9BC9007D871E /* SiteCell.swift in Sources */,
 				D9317C3024CA8FEA007D871E /* MainTabBarController.swift in Sources */,
+				D9317C3D24CA9D21007D871E /* Site.swift in Sources */,
 				D998E6E224C96235009C8EAC /* SignupViewController.swift in Sources */,
 				D9317C2D24CA8E9D007D871E /* SiteListViewController.swift in Sources */,
 				D998E6B824C7D6CE009C8EAC /* SceneDelegate.swift in Sources */,

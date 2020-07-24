@@ -120,7 +120,9 @@ class SignupViewController: UIViewController {
     }
     
     @objc private func didSaveBarButtonTapped(_ sender: UIBarButtonItem) {
-        //TODO
+        let mainTabBarController = MainTabBarController()
+        mainTabBarController.modalPresentationStyle = .fullScreen
+        present(mainTabBarController, animated: false)
     }
     
     @objc private func didCloseBarButtonTapped(_ sender: UIBarButtonItem) {
