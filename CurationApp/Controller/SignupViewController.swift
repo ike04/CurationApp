@@ -13,7 +13,7 @@ class SignupViewController: UIViewController {
     private lazy var userNameTextField: UITextField = {
         let textField = UITextField()
         let centeredParagraphStyle = NSMutableParagraphStyle()
-        let attributedPlaceholder = NSAttributedString(string: "ユーザー名",
+        let attributedPlaceholder = NSAttributedString(string: R.string.localizable.userName(),
                                                        attributes: [NSAttributedString.Key.paragraphStyle: centeredParagraphStyle]
         )
         textField.attributedPlaceholder = attributedPlaceholder
@@ -25,7 +25,7 @@ class SignupViewController: UIViewController {
     private lazy var emailTextField: UITextField = {
         let textField = UITextField()
         let centeredParagraphStyle = NSMutableParagraphStyle()
-        let attributedPlaceholder = NSAttributedString(string: "email",
+        let attributedPlaceholder = NSAttributedString(string: R.string.localizable.email(),
                                                        attributes: [NSAttributedString.Key.paragraphStyle: centeredParagraphStyle]
         )
         textField.attributedPlaceholder = attributedPlaceholder
@@ -37,7 +37,7 @@ class SignupViewController: UIViewController {
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         let centeredParagraphStyle = NSMutableParagraphStyle()
-        let attributedPlaceholder = NSAttributedString(string: "password",
+        let attributedPlaceholder = NSAttributedString(string: R.string.localizable.password(),
                                                        attributes: [NSAttributedString.Key.paragraphStyle: centeredParagraphStyle]
         )
         textField.attributedPlaceholder = attributedPlaceholder
@@ -50,7 +50,7 @@ class SignupViewController: UIViewController {
     private lazy var passwordConfirmTextField: UITextField = {
         let textField = UITextField()
         let centeredParagraphStyle = NSMutableParagraphStyle()
-        let attributedPlaceholder = NSAttributedString(string: "password confirm",
+        let attributedPlaceholder = NSAttributedString(string: R.string.localizable.passwordConfirm(),
                                                        attributes: [NSAttributedString.Key.paragraphStyle: centeredParagraphStyle]
         )
         textField.attributedPlaceholder = attributedPlaceholder
@@ -61,7 +61,7 @@ class SignupViewController: UIViewController {
     }()
     
     private lazy var saveBarButton: UIBarButtonItem = {
-        let saveBarButton =  UIBarButtonItem(title: "登録",
+        let saveBarButton =  UIBarButtonItem(title: R.string.localizable.register(),
                                              style: .plain,
                                              target: self,
                                              action: #selector(didSaveBarButtonTapped(_:)))
@@ -70,7 +70,7 @@ class SignupViewController: UIViewController {
     }()
     
     private lazy var closeBarButton: UIBarButtonItem = {
-        let closeBarButton =  UIBarButtonItem(title: "閉じる",
+        let closeBarButton =  UIBarButtonItem(title: R.string.localizable.close(),
                                               style: .plain,
                                               target: self,
                                               action: #selector(didCloseBarButtonTapped(_:)))
@@ -113,7 +113,7 @@ class SignupViewController: UIViewController {
     
     // MARK: - Navigation
     private func getNavigation() {
-        self.navigationItem.title = "Sign up"
+        self.navigationItem.title = R.string.localizable.signup()
         
         navigationItem.setRightBarButton(saveBarButton, animated: true)
         navigationItem.setLeftBarButton(closeBarButton, animated: true)

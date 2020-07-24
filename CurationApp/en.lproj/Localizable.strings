@@ -5,5 +5,15 @@
   Created by 池田一成 on 2020/07/23.
   Copyright © 2020 池田一成. All rights reserved.
 */
+"userName" = "ユーザー名";
 "email" = "メールアドレス";
 "password" = "パスワード";
+"passwordConfirm" = "確認パスワード";
+
+"login" = "ログイン";
+"signup" = "Sign up";
+"siteList" = "一覧";
+"register" = "登録";
+"close" = "閉じる";
+
+"login" = "ログイン";

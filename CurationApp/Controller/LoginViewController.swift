@@ -12,14 +12,14 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
-            emailTextField.placeholder = "email"
+            emailTextField.placeholder = R.string.localizable.email()
             emailTextField.clearButtonMode = .always
         }
     }
     
     @IBOutlet weak var passwordTextField: UITextField! {
         didSet {
-            passwordTextField.placeholder = "password"
+            passwordTextField.placeholder = R.string.localizable.password()
             passwordTextField.clearButtonMode = .always
             passwordTextField.isSecureTextEntry = true
         }
@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton! {
         didSet {
-            loginButton.setTitle("ログイン", for: UIControl.State.normal)
+            loginButton.setTitle(R.string.localizable.login(), for: UIControl.State.normal)
             loginButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
             loginButton.backgroundColor = UIColor.systemBlue
             loginButton.layer.cornerRadius = 10
@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var signupButton: UIButton! {
         didSet {
-            signupButton.setTitle("Sign up", for: UIControl.State.normal)
+            signupButton.setTitle(R.string.localizable.signup(), for: UIControl.State.normal)
             signupButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
             signupButton.backgroundColor = UIColor.systemBlue
             signupButton.layer.cornerRadius = 10

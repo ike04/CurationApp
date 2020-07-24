@@ -14,10 +14,10 @@ final class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         let siteListNavigationController = UINavigationController(rootViewController: SiteListViewController())
-        siteListNavigationController.tabBarItem = UITabBarItem(title: "Home", image: nil, tag: 1)
+        siteListNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
         
         let accountViewController: UIViewController = AccountViewController()
-        accountViewController.tabBarItem = UITabBarItem(title: "Account", image: nil, tag: 2)
+        accountViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
         
         let myTabs = NSArray(objects: siteListNavigationController, accountViewController)
         setViewControllers(myTabs as? [UIViewController], animated: true)

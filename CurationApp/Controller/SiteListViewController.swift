@@ -11,8 +11,7 @@ import UIKit
 class SiteListViewController: UIViewController {
     
     private lazy var addBarButton: UIBarButtonItem = {
-        let saveBarButton =  UIBarButtonItem(title: "登録",
-                                             style: .plain,
+        let saveBarButton =  UIBarButtonItem(barButtonSystemItem: .add,
                                              target: self,
                                              action: #selector(didAddBarButtonTapped(_:)))
         
@@ -21,12 +20,12 @@ class SiteListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getNavigation()
     }
-    
     
     // MARK: - Navigation
     private func getNavigation() {
-        self.navigationItem.title = "一覧"
+        self.navigationItem.title = R.string.localizable.siteList()
         
         navigationItem.setRightBarButton(addBarButton, animated: true)
     }
