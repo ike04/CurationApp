@@ -9,22 +9,30 @@
 import UIKit
 
 class SiteListViewController: UIViewController {
-
+    
+    private lazy var addBarButton: UIBarButtonItem = {
+        let saveBarButton =  UIBarButtonItem(title: "登録",
+                                             style: .plain,
+                                             target: self,
+                                             action: #selector(didAddBarButtonTapped(_:)))
+        
+        return saveBarButton
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
+    
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func getNavigation() {
+        self.navigationItem.title = "一覧"
+        
+        navigationItem.setRightBarButton(addBarButton, animated: true)
     }
-    */
-
+    
+    @objc private func didAddBarButtonTapped(_ sender: UIBarButtonItem) {
+        //TODO
+    }
+    
 }

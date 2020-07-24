@@ -48,7 +48,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didLoginButtonTapped(_ sender: Any) {
-        //TODO
+        let mainTabBarController = MainTabBarController()
+        mainTabBarController.modalPresentationStyle = .fullScreen
+        present(mainTabBarController, animated: false)
     }
     
     @IBAction func didSignupTapped(_ sender: Any) {

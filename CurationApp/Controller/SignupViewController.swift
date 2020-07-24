@@ -111,7 +111,7 @@ class SignupViewController: UIViewController {
         passwordConfirmTextField.widthAnchor.constraint(equalToConstant: 250).isActive = true
     }
     
-    // NavigatinBar
+    // MARK: - Navigation
     private func getNavigation() {
         self.navigationItem.title = "Sign up"
         

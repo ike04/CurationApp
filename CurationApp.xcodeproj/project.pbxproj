@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9317C2D24CA8E9D007D871E /* SiteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9317C2B24CA8E9D007D871E /* SiteListViewController.swift */; };
+		D9317C2E24CA8E9D007D871E /* SiteListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9317C2C24CA8E9D007D871E /* SiteListViewController.xib */; };
+		D9317C3024CA8FEA007D871E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9317C2F24CA8FEA007D871E /* MainTabBarController.swift */; };
+		D9317C3324CA9382007D871E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9317C3224CA9382007D871E /* R.generated.swift */; };
+		D9317C3624CA945F007D871E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9317C3424CA945F007D871E /* AccountViewController.swift */; };
+		D9317C3724CA945F007D871E /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9317C3524CA945F007D871E /* AccountViewController.xib */; };
 		D998E6B624C7D6CE009C8EAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6B524C7D6CE009C8EAC /* AppDelegate.swift */; };
 		D998E6B824C7D6CE009C8EAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6B724C7D6CE009C8EAC /* SceneDelegate.swift */; };
 		D998E6BA24C7D6CE009C8EAC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6B924C7D6CE009C8EAC /* LoginViewController.swift */; };
@@ -50,6 +56,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D9317C2B24CA8E9D007D871E /* SiteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteListViewController.swift; sourceTree = "<group>"; };
+		D9317C2C24CA8E9D007D871E /* SiteListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SiteListViewController.xib; sourceTree = "<group>"; };
+		D9317C2F24CA8FEA007D871E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		D9317C3224CA9382007D871E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		D9317C3424CA945F007D871E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		D9317C3524CA945F007D871E /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		D998E6B224C7D6CE009C8EAC /* CurationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D998E6B524C7D6CE009C8EAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D998E6B724C7D6CE009C8EAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +104,7 @@
 		D998E6A924C7D6CE009C8EAC = {
 			isa = PBXGroup;
 			children = (
+				D9317C3224CA9382007D871E /* R.generated.swift */,
 				D998E6DC24C95D8A009C8EAC /* .swiftlint.yml */,
 				D998E6B424C7D6CE009C8EAC /* CurationApp */,
 				D998E6CB24C7D6D5009C8EAC /* CurationAppTests */,
@@ -136,6 +149,8 @@
 		D998E6DE24C961C1009C8EAC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D9317C3524CA945F007D871E /* AccountViewController.xib */,
+				D9317C2C24CA8E9D007D871E /* SiteListViewController.xib */,
 				D998E6BB24C7D6CE009C8EAC /* Login.storyboard */,
 				D9B1A69124C9832C00F96FD8 /* SignupViewController.xib */,
 			);
@@ -146,7 +161,10 @@
 			isa = PBXGroup;
 			children = (
 				D998E6E024C96235009C8EAC /* SignupViewController.swift */,
+				D9317C2B24CA8E9D007D871E /* SiteListViewController.swift */,
+				D9317C2F24CA8FEA007D871E /* MainTabBarController.swift */,
 				D998E6B924C7D6CE009C8EAC /* LoginViewController.swift */,
+				D9317C3424CA945F007D871E /* AccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,11 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D998E6D124C7D6D5009C8EAC /* Build configuration list for PBXNativeTarget "CurationApp" */;
 			buildPhases = (
-				D998E6DB24C95CFA009C8EAC /* Run Script(swiftlint) */,
+				D9317C3124CA9092007D871E /* Run Script(Rswift) */,
 				D998E6AE24C7D6CE009C8EAC /* Sources */,
 				D998E6AF24C7D6CE009C8EAC /* Frameworks */,
 				D998E6B024C7D6CE009C8EAC /* Resources */,
 				D9B1A65524C970E900F96FD8 /* ShellScript */,
+				D998E6DB24C95CFA009C8EAC /* Run Script(swiftlint) */,
 				D9B1A65A24C971B300F96FD8 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -250,6 +269,8 @@
 				D998E6BF24C7D6D4009C8EAC /* Assets.xcassets in Resources */,
 				D9B1A68F24C9832C00F96FD8 /* SignupViewController.xib in Resources */,
 				D998E6BD24C7D6CE009C8EAC /* Login.storyboard in Resources */,
+				D9317C3724CA945F007D871E /* AccountViewController.xib in Resources */,
+				D9317C2E24CA8E9D007D871E /* SiteListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +284,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		D9317C3124CA9092007D871E /* Run Script(Rswift) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Run Script(Rswift)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		D998E6DB24C95CFA009C8EAC /* Run Script(swiftlint) */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,8 +349,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D998E6BA24C7D6CE009C8EAC /* LoginViewController.swift in Sources */,
+				D9317C3324CA9382007D871E /* R.generated.swift in Sources */,
+				D9317C3624CA945F007D871E /* AccountViewController.swift in Sources */,
 				D998E6B624C7D6CE009C8EAC /* AppDelegate.swift in Sources */,
+				D9317C3024CA8FEA007D871E /* MainTabBarController.swift in Sources */,
 				D998E6E224C96235009C8EAC /* SignupViewController.swift in Sources */,
+				D9317C2D24CA8E9D007D871E /* SiteListViewController.swift in Sources */,
 				D998E6B824C7D6CE009C8EAC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
