@@ -350,6 +350,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Parchment.framework",
 			);
 			outputFileListPaths = (
 			);
