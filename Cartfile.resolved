@@ -1,3 +1,3 @@
 github "SVProgressHUD/SVProgressHUD" "2.2.5"
+github "hlkim/TabPageViewController" "1cc3000e725d82f5ff20d9b0adeefdcf548e9178"
 github "mac-cain13/R.swift.Library" "v5.2.0"
-github "rechsteiner/Parchment" "v2.4.0"
