@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TabPageViewController
 
 class SiteListViewController: UIViewController {
     
@@ -19,7 +20,8 @@ class SiteListViewController: UIViewController {
     
     private lazy var siteTableView: UITableView = {
         let tableView = UITableView()
-        tableView.frame = view.bounds
+//        tableView.frame = view.bounds
+        tableView.frame = CGRect(x: 0, y: 120, width: self.view.frame.width, height: self.view.frame.height)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(R.nib.siteCell)
@@ -38,11 +40,12 @@ class SiteListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getNavigation()
+//        getNavigation()
         setupSites()
         view.addSubview(siteTableView)
+
     }
-    
+
     // MARK: - Navigation
     private func getNavigation() {
         self.navigationItem.title = R.string.localizable.siteList()
