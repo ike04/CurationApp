@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TabPageViewController
 
 class SiteListViewController: UIViewController {
     
@@ -20,7 +19,6 @@ class SiteListViewController: UIViewController {
     
     private lazy var siteTableView: UITableView = {
         let tableView = UITableView()
-//        tableView.frame = view.bounds
         tableView.frame = CGRect(x: 0, y: 120, width: self.view.frame.width, height: self.view.frame.height)
         tableView.delegate = self
         tableView.dataSource = self
@@ -40,21 +38,13 @@ class SiteListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getNavigation()
         setupSites()
         view.addSubview(siteTableView)
-
-    }
-
-    // MARK: - Navigation
-    private func getNavigation() {
-        self.navigationItem.title = R.string.localizable.siteList()
         
-        navigationItem.setRightBarButton(addBarButton, animated: true)
     }
     
     @objc private func didAddBarButtonTapped(_ sender: UIBarButtonItem) {
-        //TODO
+        // TODO
     }
     
     private func setupSites() {
@@ -68,15 +58,7 @@ extension SiteListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
-        
-//        let editBookViewController = R.storyboard.editBook.editBookViewController()!
-//
-//        // 次ページへ値を渡す
-//        let selectedBook: Book = books[indexPath.row]
-//        editBookViewController.inject(selectedBook: selectedBook)
-//
-//        // 画面遷移
-//        self.navigationController?.pushViewController(editBookViewController, animated: true)
+        // TODO
     }
 }
 
