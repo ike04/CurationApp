@@ -15,4 +15,11 @@
 "account" = "Account";
 "siteList" = "一覧";
 "register" = "登録";
+"okay" = "OK";
+"cancel" = "キャンセル";
 "close" = "閉じる";
+
+
+"addDialogTitle" = "サイトを登録します";
+"addDialogMessage" = "追加するサイトのURLを入力してください。";
+"add" = "追加する";

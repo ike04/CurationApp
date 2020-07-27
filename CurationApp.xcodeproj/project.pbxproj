@@ -25,6 +25,7 @@
 		D998E6CD24C7D6D5009C8EAC /* CurationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6CC24C7D6D5009C8EAC /* CurationAppTests.swift */; };
 		D998E6DD24C95D8A009C8EAC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D998E6DC24C95D8A009C8EAC /* .swiftlint.yml */; };
 		D998E6E224C96235009C8EAC /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6E024C96235009C8EAC /* SignupViewController.swift */; };
+		D9B0849824CE7F5100024A96 /* UIAlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0849724CE7F5100024A96 /* UIAlertExtension.swift */; };
 		D9B1A65824C971B300F96FD8 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65724C971B300F96FD8 /* Rswift.framework */; };
 		D9B1A65924C971B300F96FD8 /* Rswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65724C971B300F96FD8 /* Rswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9B1A65C24C971C300F96FD8 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65B24C971C300F96FD8 /* SVProgressHUD.framework */; };
@@ -80,6 +81,7 @@
 		D998E6CE24C7D6D5009C8EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D998E6DC24C95D8A009C8EAC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D998E6E024C96235009C8EAC /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		D9B0849724CE7F5100024A96 /* UIAlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertExtension.swift; sourceTree = "<group>"; };
 		D9B1A65724C971B300F96FD8 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		D9B1A65B24C971C300F96FD8 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		D9B1A67D24C980DE00F96FD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		D998E6B424C7D6CE009C8EAC /* CurationApp */ = {
 			isa = PBXGroup;
 			children = (
+				D9B0849624CE7F3000024A96 /* Extension */,
 				D998E6DF24C961D0009C8EAC /* Controller */,
 				D998E6DE24C961C1009C8EAC /* View */,
 				D998E6B524C7D6CE009C8EAC /* AppDelegate.swift */,
@@ -184,6 +187,14 @@
 				D9317C3424CA945F007D871E /* AccountViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D9B0849624CE7F3000024A96 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D9B0849724CE7F5100024A96 /* UIAlertExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D9B1A65624C971B300F96FD8 /* Frameworks */ = {
@@ -377,6 +388,7 @@
 				D9317C3D24CA9D21007D871E /* Site.swift in Sources */,
 				D998E6E224C96235009C8EAC /* SignupViewController.swift in Sources */,
 				D9317C2D24CA8E9D007D871E /* SiteListViewController.swift in Sources */,
+				D9B0849824CE7F5100024A96 /* UIAlertExtension.swift in Sources */,
 				D998E6B824C7D6CE009C8EAC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

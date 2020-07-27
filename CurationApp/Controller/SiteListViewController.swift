@@ -28,23 +28,11 @@ class SiteListViewController: UIViewController {
         return tableView
     }()
     
-    private lazy var addBarButton: UIBarButtonItem = {
-        let saveBarButton =  UIBarButtonItem(barButtonSystemItem: .add,
-                                             target: self,
-                                             action: #selector(didAddBarButtonTapped(_:)))
-        
-        return saveBarButton
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSites()
         view.addSubview(siteTableView)
         
-    }
-    
-    @objc private func didAddBarButtonTapped(_ sender: UIBarButtonItem) {
-        // TODO
     }
     
     private func setupSites() {

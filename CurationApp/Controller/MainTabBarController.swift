@@ -27,10 +27,6 @@ final class MainTabBarController: UITabBarController {
         setupMainTabView()
     }
     
-    @objc private func didAddBarButtonTapped(_ sender: UIBarButtonItem) {
-        // TODO
-    }
-    
     private func setupTabPageView() {
         let vc1 = SiteListViewController()
         let vc2 = UIViewController()
@@ -52,5 +48,9 @@ final class MainTabBarController: UITabBarController {
         tabPageViewController.navigationItem.title = R.string.localizable.siteList()
         tabPageViewController.navigationItem.setRightBarButton(addBarButton, animated: true)
         setViewControllers(myTabs as? [UIViewController], animated: true)
+    }
+    
+    @objc private func didAddBarButtonTapped(_ sender: UIBarButtonItem) {
+        showAlertText(title: R.string.localizable.addDialogTitle(), message: R.string.localizable.addDialogMessage())
     }
 }
