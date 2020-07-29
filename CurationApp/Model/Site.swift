@@ -9,6 +9,8 @@
 import UIKit
 
 struct Site {
-    var icon: UIImage
+    var previewImage: UIImage
     var title: String
+    var category: String?
+    var context: String
 }

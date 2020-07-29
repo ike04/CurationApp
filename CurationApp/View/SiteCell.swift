@@ -19,7 +19,7 @@ class SiteCell: UITableViewCell {
     }
 
     func setCell(site: Site) {
-        siteImage.image = site.icon
+        siteImage.image = site.previewImage
         siteTitleLabel.text = site.title
     }
     
