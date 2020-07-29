@@ -36,8 +36,10 @@ class SiteListViewController: UIViewController {
     }
     
     private func setupSites() {
-        sites = [Site(icon: R.image.image1()!,
-                      title: "サンプルタイトル")]
+        sites = [Site(previewImage: R.image.image1()!,
+                      title: "サンプルタイトル",
+                      category: "test1",
+                      context: "本文はここに格納します。")]
     }
 }
 
@@ -46,7 +48,19 @@ extension SiteListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
-        // TODO
+        
+        let siteDetailsViewController = SiteDetailsViewController()
+        
+        // 次ページへ値を渡す
+        let selectedSite: Site = sites[indexPath.row]
+        siteDetailsViewController.inject(selectedSite: selectedSite)
+        
+        self.navigationController?.pushViewController(siteDetailsViewController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        self.sites.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
 

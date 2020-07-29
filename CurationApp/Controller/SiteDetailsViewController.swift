@@ -9,22 +9,38 @@
 import UIKit
 
 class SiteDetailsViewController: UIViewController {
-
+    
+    private var selectedSite: Site?
+    
+    private var imageView = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        getNavigation()
+        setupLayout()
     }
-
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func getNavigation() {
+        self.navigationItem.title = selectedSite?.title
     }
-    */
-
+    
+    func inject(selectedSite: Site) {
+        self.selectedSite = selectedSite
+    }
+    
+    private func setupLayout() {
+        [imageView].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview($0)
+        }
+        // プレビュー画像
+        imageView.image = selectedSite?.previewImage
+        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -250).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+        
+        // TODO
+    }
 }

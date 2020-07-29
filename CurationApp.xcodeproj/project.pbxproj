@@ -26,6 +26,8 @@
 		D998E6DD24C95D8A009C8EAC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D998E6DC24C95D8A009C8EAC /* .swiftlint.yml */; };
 		D998E6E224C96235009C8EAC /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E6E024C96235009C8EAC /* SignupViewController.swift */; };
 		D9B0849824CE7F5100024A96 /* UIAlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0849724CE7F5100024A96 /* UIAlertExtension.swift */; };
+		D9B0849B24CEB0BC00024A96 /* SiteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0849924CEB0BC00024A96 /* SiteDetailsViewController.swift */; };
+		D9B0849D24CEB1A000024A96 /* SiteDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B0849F24CEB1A000024A96 /* SiteDetailsViewController.xib */; };
 		D9B1A65824C971B300F96FD8 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65724C971B300F96FD8 /* Rswift.framework */; };
 		D9B1A65924C971B300F96FD8 /* Rswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65724C971B300F96FD8 /* Rswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9B1A65C24C971C300F96FD8 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65B24C971C300F96FD8 /* SVProgressHUD.framework */; };
@@ -82,6 +84,8 @@
 		D998E6DC24C95D8A009C8EAC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D998E6E024C96235009C8EAC /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		D9B0849724CE7F5100024A96 /* UIAlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertExtension.swift; sourceTree = "<group>"; };
+		D9B0849924CEB0BC00024A96 /* SiteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDetailsViewController.swift; sourceTree = "<group>"; };
+		D9B0849E24CEB1A000024A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SiteDetailsViewController.xib; sourceTree = "<group>"; };
 		D9B1A65724C971B300F96FD8 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		D9B1A65B24C971C300F96FD8 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		D9B1A67D24C980DE00F96FD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 			children = (
 				D9317C3524CA945F007D871E /* AccountViewController.xib */,
 				D9317C2C24CA8E9D007D871E /* SiteListViewController.xib */,
+				D9B0849F24CEB1A000024A96 /* SiteDetailsViewController.xib */,
 				D998E6BB24C7D6CE009C8EAC /* Login.storyboard */,
 				D9B1A69124C9832C00F96FD8 /* SignupViewController.xib */,
 				D9317C3824CA9BC9007D871E /* SiteCell.swift */,
@@ -182,6 +187,7 @@
 			children = (
 				D998E6E024C96235009C8EAC /* SignupViewController.swift */,
 				D9317C2B24CA8E9D007D871E /* SiteListViewController.swift */,
+				D9B0849924CEB0BC00024A96 /* SiteDetailsViewController.swift */,
 				D9317C2F24CA8FEA007D871E /* MainTabBarController.swift */,
 				D998E6B924C7D6CE009C8EAC /* LoginViewController.swift */,
 				D9317C3424CA945F007D871E /* AccountViewController.swift */,
@@ -293,6 +299,7 @@
 			files = (
 				D998E6DD24C95D8A009C8EAC /* .swiftlint.yml in Resources */,
 				D9B1A67C24C980DE00F96FD8 /* Localizable.strings in Resources */,
+				D9B0849D24CEB1A000024A96 /* SiteDetailsViewController.xib in Resources */,
 				D998E6C224C7D6D4009C8EAC /* LaunchScreen.storyboard in Resources */,
 				D998E6BF24C7D6D4009C8EAC /* Assets.xcassets in Resources */,
 				D9B1A68F24C9832C00F96FD8 /* SignupViewController.xib in Resources */,
@@ -379,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B0849B24CEB0BC00024A96 /* SiteDetailsViewController.swift in Sources */,
 				D998E6BA24C7D6CE009C8EAC /* LoginViewController.swift in Sources */,
 				D9317C3324CA9382007D871E /* R.generated.swift in Sources */,
 				D9317C3624CA945F007D871E /* AccountViewController.swift in Sources */,
@@ -426,6 +434,14 @@
 				D998E6C124C7D6D4009C8EAC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D9B0849F24CEB1A000024A96 /* SiteDetailsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9B0849E24CEB1A000024A96 /* Base */,
+			);
+			name = SiteDetailsViewController.xib;
 			sourceTree = "<group>";
 		};
 		D9B1A67E24C980DE00F96FD8 /* Localizable.strings */ = {
