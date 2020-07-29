@@ -23,30 +23,30 @@ extension UIViewController {
     }
     
     func showAlertSecondlyButton(title: String, message: String, handler: ((UIAlertAction) -> Void)? = nil) {
-        let dialog = UIAlertController(title: title,
+        let alert = UIAlertController(title: title,
                                        message: message,
                                        preferredStyle: .alert
         )
         
-        dialog.addAction(UIAlertAction(title: R.string.localizable.okay(),
+        alert.addAction(UIAlertAction(title: R.string.localizable.okay(),
                                        style: .default,
                                        handler: handler)
         )
         
-        dialog.addAction(UIAlertAction(title: R.string.localizable.cancel(),
+        alert.addAction(UIAlertAction(title: R.string.localizable.cancel(),
                                        style: .cancel,
                                        handler: nil)
         )
         
-        self.present(dialog, animated: true)
+        self.present(alert, animated: true)
     }
     
-    func showAlertText(title: String, message: String) {
-        let controller = UIAlertController(title: title,
+    func showAlertText(title: String, message: String, handler: ((UIAlertAction) -> Void)? = nil) {
+        let alert = UIAlertController(title: title,
                                            message: message,
                                            preferredStyle: .alert)
 
-        controller.addTextField { textField in
+        alert.addTextField { textField in
             textField.placeholder = "追加するURL"
         }
 
@@ -55,11 +55,12 @@ extension UIViewController {
                                          handler: nil)
 
         let addAction = UIAlertAction(title: R.string.localizable.add(),
-                                      style: .default)
+                                      style: .default,
+                                      handler: handler)
 
-        controller.addAction(cancelAction)
-        controller.addAction(addAction)
+        alert.addAction(cancelAction)
+        alert.addAction(addAction)
 
-        self.present(controller, animated: true, completion: nil)
+        self.present(alert, animated: true)
     }
 }

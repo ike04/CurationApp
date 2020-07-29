@@ -51,6 +51,12 @@ final class MainTabBarController: UITabBarController {
     }
     
     @objc private func didAddBarButtonTapped(_ sender: UIBarButtonItem) {
-        showAlertText(title: R.string.localizable.addDialogTitle(), message: R.string.localizable.addDialogMessage())
+        let okAction: ((UIAlertAction) -> Void)? = { _ in
+            // TODO
+        }
+        showAlertText(title: R.string.localizable.addDialogTitle(),
+                      message: R.string.localizable.addDialogMessage(),
+                      handler: okAction)
     }
+    
 }
