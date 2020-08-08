@@ -14,6 +14,12 @@ class SiteDetailsViewController: UIViewController {
     
     private var imageView = UIImageView()
     
+    private lazy var contextLabel:UILabel = {
+        let textView = UILabel()
+        
+        return textView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getNavigation()
@@ -30,7 +36,7 @@ class SiteDetailsViewController: UIViewController {
     }
     
     private func setupLayout() {
-        [imageView].forEach {
+        [imageView, contextLabel].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -40,6 +46,13 @@ class SiteDetailsViewController: UIViewController {
         imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -250).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+        
+        // 本文
+        contextLabel.text = selectedSite?.context
+        contextLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        contextLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -120).isActive = true
+        contextLabel.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        contextLabel.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
         
         // TODO
     }
