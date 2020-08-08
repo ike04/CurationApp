@@ -41,10 +41,14 @@ final class MainTabBarController: UITabBarController {
     private func setupMainTabView() {
         tabPageViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
         accountViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
-
+        
+        let myTabs = NSArray(objects: UINavigationController(rootViewController: tabPageViewController),
+                             UINavigationController(rootViewController: accountViewController)
+        )
+        
         tabPageViewController.navigationItem.title = R.string.localizable.siteList()
         tabPageViewController.navigationItem.setRightBarButton(addBarButton, animated: true)
-        setViewControllers([tabPageViewController, accountViewController], animated: true)
+        setViewControllers(myTabs as? [UIViewController], animated: true)
     }
     
     @objc private func didAddBarButtonTapped(_ sender: UIBarButtonItem) {
