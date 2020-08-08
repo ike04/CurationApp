@@ -13,12 +13,12 @@ class AccountViewController: UIViewController {
     
     private lazy var logoutButton: UIButton = {
         let button = UIButton()
-        button.addTarget(self, action: #selector(logoutButtonEvent(_:)), for: UIControl.Event.touchUpInside)
+        button.addTarget(self, action: #selector(logoutButtonEvent(_:)), for: .touchUpInside)
         button.setTitle(R.string.localizable.logout(), for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         button.layer.borderColor = UIColor.gray.cgColor
         button.layer.borderWidth = 1
-        button.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        button.setTitleColor(UIColor.white, for: .normal)
         button.sizeToFit()
         button.layer.cornerRadius = 10
         button.backgroundColor = UIColor(red: 0, green: 122 / 255, blue: 1, alpha: 1)
@@ -55,10 +55,12 @@ class AccountViewController: UIViewController {
     }
     
     @objc private func logoutButtonEvent(_ sender: UIButton) {
-        showAlertSecondlyButton(title: R.string.localizable.logout(), message: R.string.localizable.logoutMessage()) { [weak self] _ in
-            let nextView = R.storyboard.login.instantiateInitialViewController()!
-            nextView.modalPresentationStyle = .fullScreen
-            self?.navigationController?.present(nextView, animated: true)//遷移する
+        showAlertSecondlyButton(title: R.string.localizable.logout(),
+                                message: R.string.localizable.logoutMessage()) { [weak self] _ in
+                                    
+                                    let nextView = R.storyboard.login.instantiateInitialViewController()!
+                                    nextView.modalPresentationStyle = .fullScreen
+                                    self?.navigationController?.present(nextView, animated: true)
         }
     }
 }
