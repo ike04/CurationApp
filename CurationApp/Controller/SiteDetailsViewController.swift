@@ -14,9 +14,8 @@ class SiteDetailsViewController: UIViewController {
     
     private var imageView = UIImageView()
     
-    private lazy var contextLabel:UILabel = {
+    private lazy var contextLabel: UILabel = {
         let textView = UILabel()
-        
         return textView
     }()
     

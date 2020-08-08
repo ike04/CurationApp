@@ -19,7 +19,9 @@
 "cancel" = "キャンセル";
 "close" = "閉じる";
 
-
 "addDialogTitle" = "サイトを登録します";
 "addDialogMessage" = "追加するサイトのURLを入力してください。";
 "add" = "追加する";
+
+"logout" = "ログアウト";
+"logoutMessage" = "ログアウトしてもよろしいですか？";

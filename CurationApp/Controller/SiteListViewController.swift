@@ -39,7 +39,11 @@ class SiteListViewController: UIViewController {
         sites = [Site(previewImage: R.image.image1()!,
                       title: "サンプルタイトル",
                       category: "test1",
-                      context: "本文はここに格納します。")]
+                      context: "本文はここに格納します。"),
+                 Site(previewImage: R.image.image1()!,
+                      title: "サンプルタイトル2",
+                      category: "test1",
+                      context: "テストデータの本文が格納されています")]
     }
 }
 
