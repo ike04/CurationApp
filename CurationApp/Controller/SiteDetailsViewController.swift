@@ -15,8 +15,8 @@ class SiteDetailsViewController: UIViewController {
     private var imageView = UIImageView()
     
     private lazy var contextLabel: UILabel = {
-        let textView = UILabel()
-        return textView
+        let label = UILabel()
+        return label
     }()
     
     override func viewDidLoad() {
