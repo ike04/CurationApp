@@ -56,11 +56,11 @@ class AccountViewController: UIViewController {
     
     @objc private func logoutButtonEvent(_ sender: UIButton) {
         showAlertSecondlyButton(title: R.string.localizable.logout(),
-                                message: R.string.localizable.logoutMessage()) { [weak self] _ in
-                                    
-                                    let nextView = R.storyboard.login.instantiateInitialViewController()!
-                                    nextView.modalPresentationStyle = .fullScreen
-                                    self?.navigationController?.present(nextView, animated: true)
+                                message: R.string.localizable.logoutMessage())
+        {[weak self] _ in
+            let nextView = R.storyboard.login.instantiateInitialViewController()!
+            nextView.modalPresentationStyle = .fullScreen
+            self?.navigationController?.present(nextView, animated: true)
         }
     }
 }

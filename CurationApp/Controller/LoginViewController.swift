@@ -10,6 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    private struct Const {
+        static let maxTextFieldLength: Int = 6
+    }
+    
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             emailTextField.placeholder = R.string.localizable.email()
@@ -48,6 +52,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didLoginButtonTapped(_ sender: Any) {
+        guard let email = emailTextField.text,
+            let password = passwordTextField.text
+            else { return }
+        
+        if let error = getError(email: email, password: password) {
+            showAlert(title: R.string.localizable.inputError(),
+                      message: error.message)
+            return
+        }
+        
         let mainTabBarController = MainTabBarController()
         mainTabBarController.modalPresentationStyle = .fullScreen
         present(mainTabBarController, animated: false)
@@ -57,6 +71,19 @@ class LoginViewController: UIViewController {
         let signupViewController: UIViewController = SignupViewController()
         let signupView = UINavigationController(rootViewController: signupViewController)
         self.present(signupView, animated: true)
+    }
+    
+    // MARK: - Validation
+    func getError(email: String, password: String) -> UIErrorType? {
+        guard !email.isEmpty && !password.isEmpty else {
+            return .empty
+        }
+        
+        guard email.count >= Const.maxTextFieldLength &&
+            password.count >= Const.maxTextFieldLength else {
+                return .count
+        }
+        return nil
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

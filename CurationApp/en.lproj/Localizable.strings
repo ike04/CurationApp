@@ -25,3 +25,9 @@
 
 "logout" = "ログアウト";
 "logoutMessage" = "ログアウトしてもよろしいですか？";
+
+"inputError" = "入力エラー";
+"empty" = "未入力の項目があります。";
+"minmum" = "6文字以上入力してください";
+"notMatchPassword" = "パスワードが一致しません。";
+"emailValid" = "メールアドレスの形式が正しくありません。";

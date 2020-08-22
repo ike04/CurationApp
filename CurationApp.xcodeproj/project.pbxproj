@@ -34,6 +34,7 @@
 		D9B1A65D24C971C300F96FD8 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9B1A65B24C971C300F96FD8 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9B1A67C24C980DE00F96FD8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9B1A67E24C980DE00F96FD8 /* Localizable.strings */; };
 		D9B1A68F24C9832C00F96FD8 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B1A69124C9832C00F96FD8 /* SignupViewController.xib */; };
+		D9DD575524F0EE0F00AAC8B4 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD575424F0EE0F00AAC8B4 /* ErrorType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		D9B1A67D24C980DE00F96FD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D9B1A68E24C9831A00F96FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D9B1A69024C9832C00F96FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignupViewController.xib; sourceTree = "<group>"; };
+		D9DD575424F0EE0F00AAC8B4 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				D9317C3C24CA9D21007D871E /* Site.swift */,
+				D9DD575424F0EE0F00AAC8B4 /* ErrorType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B0849B24CEB0BC00024A96 /* SiteDetailsViewController.swift in Sources */,
+				D9DD575524F0EE0F00AAC8B4 /* ErrorType.swift in Sources */,
 				D998E6BA24C7D6CE009C8EAC /* LoginViewController.swift in Sources */,
 				D9317C3324CA9382007D871E /* R.generated.swift in Sources */,
 				D9317C3624CA945F007D871E /* AccountViewController.swift in Sources */,

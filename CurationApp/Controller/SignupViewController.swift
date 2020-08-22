@@ -10,6 +10,11 @@ import UIKit
 
 class SignupViewController: UIViewController {
     
+    private struct Const {
+        static let maxTextFieldLength: Int = 6
+        static let emailRegEx: String = "[A-Z0-9a-z._+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+    }
+    
     private lazy var userNameTextField: UITextField = {
         let textField = UITextField()
         let centeredParagraphStyle = NSMutableParagraphStyle()
@@ -120,6 +125,20 @@ class SignupViewController: UIViewController {
     }
     
     @objc private func didSaveBarButtonTapped(_ sender: UIBarButtonItem) {
+        guard let userName = userNameTextField.text,
+            let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let passwordConfirm = passwordConfirmTextField.text else { return }
+        
+        if let error = getError(userName: userName,
+                                email: email,
+                                password: password,
+                                passwordConfirm: passwordConfirm) {
+            showAlert(title: R.string.localizable.inputError(),
+                      message: error.message)
+            return
+        }
+        
         let mainTabBarController = MainTabBarController()
         mainTabBarController.modalPresentationStyle = .fullScreen
         present(mainTabBarController, animated: false)
@@ -127,6 +146,36 @@ class SignupViewController: UIViewController {
     
     @objc private func didCloseBarButtonTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true)
+    }
+    
+    // MARK: - Validation
+    func getError(userName: String, email: String, password: String, passwordConfirm: String) -> UIErrorType? {
+        guard !userName.isEmpty && !email.isEmpty && !password.isEmpty && !passwordConfirm.isEmpty else {
+            return .empty
+        }
+        
+        guard self.isValidEmail(email) else {
+            return .emailValid
+        }
+        
+        guard email.count >= Const.maxTextFieldLength &&
+            password.count >= Const.maxTextFieldLength else {
+                return .count
+        }
+        
+        guard password == passwordConfirm else {
+            return .notMatchPassword
+        }
+        
+        return nil
+    }
+    
+    private func isValidEmail(_ string: String) -> Bool {
+        let emailTest = NSPredicate(format: "SELF MATCHES %@",
+                                    Const.emailRegEx)
+        
+        let result = emailTest.evaluate(with: string)
+        return result
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
