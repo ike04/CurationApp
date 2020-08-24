@@ -29,9 +29,9 @@ final class MainTabBarController: UITabBarController {
     
     private func setupTabPageView() {
         let vc1 = SiteListViewController()
-        let vc2 = UIViewController()
-        let vc3 = UIViewController()
-        let vc4 = UIViewController()
+        let vc2 = SiteListViewController()
+        let vc3 = SiteListViewController()
+        let vc4 = SiteListViewController()
         
         tabPageViewController.tabItems = [(vc1, R.string.localizable.all()),
                                           (vc2, R.string.localizable.category1()),
@@ -56,12 +56,46 @@ final class MainTabBarController: UITabBarController {
     }
     
     @objc private func didAddBarButtonTapped(_ sender: UIBarButtonItem) {
-        let okAction: ((UIAlertAction) -> Void)? = { _ in
-            // TODO
-        }
-        showAlertText(title: R.string.localizable.addDialogTitle(),
-                      message: R.string.localizable.addDialogMessage(),
-                      handler: okAction)
+        var alertTextField: UITextField?
+        
+        let alert = UIAlertController(
+            title: R.string.localizable.addDialogTitle(),
+            message: R.string.localizable.addDialogMessage(),
+            preferredStyle: UIAlertController.Style.alert)
+        alert.addTextField(
+            configurationHandler: {(textField: UITextField!) in
+                alertTextField = textField
+                
+        })
+        alert.addAction(
+            UIAlertAction(
+                title: R.string.localizable.cancel(),
+                style: UIAlertAction.Style.cancel,
+                handler: nil))
+        
+        alert.addAction(
+            UIAlertAction(
+                title: R.string.localizable.okay(),
+                style: UIAlertAction.Style.default) { [weak self] _ in
+                    if let text = alertTextField?.text {
+                        if let error = self?.getError(url: text) {
+                            self?.showAlert(title: R.string.localizable.inputError(),
+                                            message: error.message)
+                            return
+                        }
+                        
+                        // TODO
+                    }
+            }
+        )
+        self.present(alert, animated: true, completion: nil)
     }
     
+    // MARK: - Validation
+    func getError(url: String) -> UIErrorType? {
+        guard !url.isEmpty  else {
+            return .emptyUrl
+        }
+        return nil
+    }
 }

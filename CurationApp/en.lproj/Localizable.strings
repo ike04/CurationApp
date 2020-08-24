@@ -24,7 +24,7 @@
 "cancel" = "キャンセル";
 "close" = "閉じる";
 
-"addDialogTitle" = "サイトを登録します";
+"addDialogTitle" = "サイトを追加します";
 "addDialogMessage" = "追加するサイトのURLを入力してください。";
 "add" = "追加する";
 
@@ -36,3 +36,4 @@
 "minmum" = "6文字以上入力してください";
 "notMatchPassword" = "パスワードが一致しません。";
 "emailValid" = "メールアドレスの形式が正しくありません。";
+"emptyUrl" = "登録するサイトのURLが入力されていません。";

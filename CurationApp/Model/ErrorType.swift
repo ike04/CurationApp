@@ -13,6 +13,7 @@ enum UIErrorType: Error {
     case count
     case notMatchPassword
     case emailValid
+    case emptyUrl
 
     var message: String {
         switch self {
@@ -24,6 +25,8 @@ enum UIErrorType: Error {
             return R.string.localizable.notMatchPassword()
         case .emailValid:
             return R.string.localizable.emailValid()
+        case .emptyUrl:
+            return R.string.localizable.emptyUrl()
         }
     }
 }
