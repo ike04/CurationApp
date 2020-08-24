@@ -35,6 +35,7 @@
 		D9B1A67C24C980DE00F96FD8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9B1A67E24C980DE00F96FD8 /* Localizable.strings */; };
 		D9B1A68F24C9832C00F96FD8 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B1A69124C9832C00F96FD8 /* SignupViewController.xib */; };
 		D9DD575524F0EE0F00AAC8B4 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD575424F0EE0F00AAC8B4 /* ErrorType.swift */; };
+		D9DD575724F34EEC00AAC8B4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD575624F34EEC00AAC8B4 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		D9B1A68E24C9831A00F96FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D9B1A69024C9832C00F96FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignupViewController.xib; sourceTree = "<group>"; };
 		D9DD575424F0EE0F00AAC8B4 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		D9DD575624F34EEC00AAC8B4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				D9317C3C24CA9D21007D871E /* Site.swift */,
 				D9DD575424F0EE0F00AAC8B4 /* ErrorType.swift */,
+				D9DD575624F34EEC00AAC8B4 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				D9317C3324CA9382007D871E /* R.generated.swift in Sources */,
 				D9317C3624CA945F007D871E /* AccountViewController.swift in Sources */,
 				D998E6B624C7D6CE009C8EAC /* AppDelegate.swift in Sources */,
+				D9DD575724F34EEC00AAC8B4 /* User.swift in Sources */,
 				D9317C3A24CA9BC9007D871E /* SiteCell.swift in Sources */,
 				D9317C3024CA8FEA007D871E /* MainTabBarController.swift in Sources */,
 				D9317C3D24CA9D21007D871E /* Site.swift in Sources */,
