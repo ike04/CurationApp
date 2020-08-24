@@ -14,6 +14,11 @@
 "signup" = "Sign up";
 "account" = "Account";
 "siteList" = "一覧";
+"all" = "ALL";
+"category1" = "category1";
+"category2" = "category2";
+"category3" = "category3";
+
 "register" = "登録";
 "okay" = "OK";
 "cancel" = "キャンセル";

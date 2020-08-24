@@ -33,7 +33,11 @@ final class MainTabBarController: UITabBarController {
         let vc3 = UIViewController()
         let vc4 = UIViewController()
         
-        tabPageViewController.tabItems = [(vc1, "ALL"), (vc2, "Category1"), (vc3, "Category2"), (vc4, "Category3")]
+        tabPageViewController.tabItems = [(vc1, R.string.localizable.all()),
+                                          (vc2, R.string.localizable.category1()),
+                                          (vc3, R.string.localizable.category2()),
+                                          (vc4, R.string.localizable.category3())]
+        
         tabPageViewController.isInfinity = true
         tabPageViewController.option.tabHeight = 30.0
     }

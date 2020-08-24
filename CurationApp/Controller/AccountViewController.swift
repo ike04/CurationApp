@@ -12,7 +12,7 @@ import TabPageViewController
 class AccountViewController: UIViewController {
     private var users: [User] = [User]()
     
-    // MARK: -Propaties
+    // MARK: - Propaties
     private lazy var logoutButton: UIButton = {
         let button = UIButton()
         button.addTarget(self, action: #selector(logoutButtonEvent(_:)), for: .touchUpInside)
