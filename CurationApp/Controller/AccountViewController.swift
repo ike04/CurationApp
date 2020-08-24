@@ -10,7 +10,8 @@ import UIKit
 import TabPageViewController
 
 class AccountViewController: UIViewController {
-    private var users: [User] = [User]()
+    // テストデータ
+    private var users = User(userName: "TestUser", email: "test@example.com")
     
     // MARK: - Propaties
     private lazy var logoutButton: UIButton = {
@@ -39,6 +40,7 @@ class AccountViewController: UIViewController {
         label.layer.borderWidth = 0.5
         label.layer.cornerRadius = 5.0
         label.layer.borderColor = UIColor.darkGray.cgColor
+        label.text = users.userName
         return label
     }()
     
@@ -53,15 +55,12 @@ class AccountViewController: UIViewController {
         label.layer.borderWidth = 0.5
         label.layer.cornerRadius = 5.0
         label.layer.borderColor = UIColor.darkGray.cgColor
+        label.text = users.email
         return label
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // テスト用データ
-        users = [User(userName: "TestUser",
-                      email: "test@example.com")]
         
         getNavigation()
         setupLayout()
@@ -90,7 +89,6 @@ class AccountViewController: UIViewController {
         loginUserNameLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -200).isActive = true
         loginUserNameLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         loginUserNameLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75).isActive = true
-        loginUserNameLabel.text = users[0].userName
         
         // メールアドレス
         emailLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -20).isActive = true
@@ -103,7 +101,6 @@ class AccountViewController: UIViewController {
         loginEmailLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100).isActive = true
         loginEmailLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         loginEmailLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75).isActive = true
-        loginEmailLabel.text = users[0].email
         
         // ログアウト
         logoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

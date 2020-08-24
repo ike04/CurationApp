@@ -88,7 +88,7 @@ final class MainTabBarController: UITabBarController {
                     }
             }
         )
-        self.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true)
     }
     
     // MARK: - Validation
