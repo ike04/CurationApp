@@ -79,9 +79,8 @@ class LoginViewController: UIViewController {
             return .empty
         }
         
-        guard email.count >= Const.maxTextFieldLength &&
-            password.count >= Const.maxTextFieldLength else {
-                return .count
+        guard password.count >= Const.maxTextFieldLength else {
+            return .count
         }
         return nil
     }

@@ -26,6 +26,18 @@ class AccountViewController: UIViewController {
         return button
     }()
     
+    private lazy var userNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = R.string.localizable.userName()
+        return label
+    }()
+    
+    private lazy var emailLabel: UILabel = {
+        let label = UILabel()
+        label.text = R.string.localizable.email()
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,10 +52,22 @@ class AccountViewController: UIViewController {
     }
     
     private func setupLayout() {
-        [logoutButton].forEach {
+        [userNameLabel, emailLabel, logoutButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
+        
+        // ユーザー名
+        userNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -50).isActive = true
+        userNameLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -250).isActive = true
+        userNameLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        userNameLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        
+        // メールアドレス
+        emailLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -50).isActive = true
+        emailLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -150).isActive = true
+        emailLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        emailLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
         
         // ログアウト
         logoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -56,11 +80,10 @@ class AccountViewController: UIViewController {
     
     @objc private func logoutButtonEvent(_ sender: UIButton) {
         showAlertSecondlyButton(title: R.string.localizable.logout(),
-                                message: R.string.localizable.logoutMessage())
-        {[weak self] _ in
-            let nextView = R.storyboard.login.instantiateInitialViewController()!
-            nextView.modalPresentationStyle = .fullScreen
-            self?.navigationController?.present(nextView, animated: true)
+                                message: R.string.localizable.logoutMessage()) { [weak self] _ in
+                                    let nextView = R.storyboard.login.instantiateInitialViewController()!
+                                    nextView.modalPresentationStyle = .fullScreen
+                                    self?.navigationController?.present(nextView, animated: true)
         }
     }
 }
