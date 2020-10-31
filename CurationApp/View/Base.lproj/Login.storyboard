@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0oE-Ys-EOk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--login-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="login" title="login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="CurationApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HcE-tt-0EK">
+                                <rect key="frame" x="82" y="186" width="250" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qw-Jf-lbm">
+                                <rect key="frame" x="82" y="264" width="250" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVN-ai-xUT">
+                                <rect key="frame" x="82" y="344" width="250" height="30"/>
+                                <connections>
+                                    <action selector="didLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amt-T6-mhr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-Ht-UGi">
+                                <rect key="frame" x="238" y="800" width="131" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didSignupTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaD-Hc-cUd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5qw-Jf-lbm" firstAttribute="leading" secondItem="OVN-ai-xUT" secondAttribute="leading" id="20v-gE-20m"/>
+                            <constraint firstItem="OVN-ai-xUT" firstAttribute="top" secondItem="5qw-Jf-lbm" secondAttribute="bottom" constant="46" id="3h0-0U-ORc"/>
+                            <constraint firstItem="HcE-tt-0EK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5tE-M5-66b"/>
+                            <constraint firstItem="HcE-tt-0EK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="IL7-fD-WNq"/>
+                            <constraint firstItem="5qw-Jf-lbm" firstAttribute="top" secondItem="HcE-tt-0EK" secondAttribute="bottom" constant="44" id="Ovj-XB-18i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bdg-Ht-UGi" secondAttribute="bottom" constant="32" id="RFP-DP-sej"/>
+                            <constraint firstItem="5qw-Jf-lbm" firstAttribute="trailing" secondItem="OVN-ai-xUT" secondAttribute="trailing" id="SZO-ba-ZsQ"/>
+                            <constraint firstItem="HcE-tt-0EK" firstAttribute="trailing" secondItem="5qw-Jf-lbm" secondAttribute="trailing" id="W2b-kK-SuJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bdg-Ht-UGi" secondAttribute="trailing" constant="45" id="ZIj-hQ-RwF"/>
+                            <constraint firstItem="HcE-tt-0EK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="aHz-C9-uC2"/>
+                            <constraint firstItem="HcE-tt-0EK" firstAttribute="leading" secondItem="5qw-Jf-lbm" secondAttribute="leading" id="i35-63-wCq"/>
+                            <constraint firstItem="Bdg-Ht-UGi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="238" id="rVk-PD-hkr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ログイン" id="tJI-v1-3UT"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="HcE-tt-0EK" id="VLM-sT-qXW"/>
+                        <outlet property="loginButton" destination="OVN-ai-xUT" id="vLb-Yq-BOE"/>
+                        <outlet property="passwordTextField" destination="5qw-Jf-lbm" id="g35-8D-0Qg"/>
+                        <outlet property="signupButton" destination="Bdg-Ht-UGi" id="of9-S0-owi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9oM-t0-8ZR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0oE-Ys-EOk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o7n-JC-81s">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RDB-5F-fHQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Qj-NM-OwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>

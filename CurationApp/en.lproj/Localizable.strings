@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  CurationApp
+
+  Created by 池田一成 on 2020/07/23.
+  Copyright © 2020 池田一成. All rights reserved.
+*/
+"userName" = "ユーザー名";
+"email" = "メールアドレス";
+"password" = "パスワード";
+"passwordConfirm" = "確認パスワード";
+
+"login" = "ログイン";
+"signup" = "Sign up";
+"account" = "Account";
+"siteList" = "一覧";
+"all" = "ALL";
+"category1" = "category1";
+"category2" = "category2";
+"category3" = "category3";
+
+"register" = "登録";
+"okay" = "OK";
+"cancel" = "キャンセル";
+"close" = "閉じる";
+
+"addDialogTitle" = "サイトを追加します";
+"addDialogMessage" = "追加するサイトのURLを入力してください。";
+"add" = "追加する";
+
+"logout" = "ログアウト";
+"logoutMessage" = "ログアウトしてもよろしいですか？";
+
+"inputError" = "入力エラー";
+"empty" = "未入力の項目があります。";
+"minmum" = "6文字以上入力してください";
+"notMatchPassword" = "パスワードが一致しません。";
+"emailValid" = "メールアドレスの形式が正しくありません。";
+"emptyUrl" = "登録するサイトのURLが入力されていません。";
